@@ -1,0 +1,30 @@
+{
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "browserify-shim": {
+    "global": true,
+    "three": "global:THREE",
+    "moment": {
+      "exports": "global:moment"
+    },
+    "usagejs": {
+      "depends": [
+        "moment"
+      ]
+    },
+    "date-period": {
+      "depends": "moment"
+    }
+  },
+  "devDependencies": {
+    "exposify": "^0.3.0",
+    "underscore": "^1.8.2",
+    "usagejs": "^0.1.0"
+  },
+  "dependencies": {
+    "date-period": "^0.2.1"
+  }
+}
