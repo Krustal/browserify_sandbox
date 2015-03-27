@@ -1,4 +1,11 @@
 {
+  "name": "browserify-sandbox",
+  "version": "1.0.0",
+  "description": "Sandbox for testing browserify configurations",
+  "main": "main.js",
+  "scripts": {
+    "build": "node build.js"
+  },
   "browserify": {
     "transform": [
       "browserify-shim"
@@ -9,16 +16,18 @@
     "three": "global:THREE",
     "moment": "global:moment",
     "usagejs": {
-      "depends": [
-        "moment"
-      ]
+      "depends": [ "moment" ]
     }
   },
   "devDependencies": {
-    "underscore": "^1.8.2"
+    "browserify": "^9.0.3",
+    "browserify-shim": "^3.8.3",
+    "fs": "0.0.2",
+    "path": "^0.11.14"
   },
   "dependencies": {
     "moment": "^2.9.0",
+    "underscore": "^1.8.2",
     "usagejs": "^0.1.0"
   }
 }

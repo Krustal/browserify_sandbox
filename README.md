@@ -6,4 +6,10 @@ window namespace.
 
 # Build
 
+npm install
+
 BROWSERIFYSHIM_DIAGNOSTICS=1 browserify main.js -o bundle.js
+
+> or
+
+npm run build
