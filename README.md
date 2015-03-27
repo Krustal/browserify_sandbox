@@ -6,4 +6,4 @@ window namespace.
 
 # Build
 
-BROWSERIFYSHIM_DIAGNOSTICS=1 browserify main.js -o bundle.js
+BROWSERIFYSHIM_DIAGNOSTICS=1 browserify main.js -o bundle.js --external moment

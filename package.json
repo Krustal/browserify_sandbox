@@ -1,30 +1,16 @@
 {
+  "repository": {},
   "browserify": {
-    "transform": [
-      "browserify-shim"
-    ]
+    "transform": ["browserify-shim"]
   },
   "browserify-shim": {
-    "global": true,
-    "three": "global:THREE",
-    "moment": {
-      "exports": "global:moment"
-    },
-    "usagejs": {
-      "depends": [
-        "moment"
-      ]
-    },
-    "date-period": {
-      "depends": "moment"
-    }
-  },
-  "devDependencies": {
-    "exposify": "^0.3.0",
-    "underscore": "^1.8.2",
-    "usagejs": "^0.1.0"
+    "moment": "global:moment"
   },
   "dependencies": {
-    "date-period": "^0.2.1"
+    "usagejs": "^0.1.0"
+  },
+  "devDependencies": {
+    "browserify": "~9.0.3",
+    "browserify-shim": "~3.8.3"
   }
 }
