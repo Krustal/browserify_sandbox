@@ -11,13 +11,11 @@
       "browserify-shim"
     ]
   },
+  "browser": {
+    "moment": "./node_modules/moment/moment.js"
+  },
   "browserify-shim": {
-    "global": true,
-    "three": "global:THREE",
-    "moment": "global:moment",
-    "usagejs": {
-      "depends": [ "moment" ]
-    }
+    "moment": "moment"
   },
   "devDependencies": {
     "browserify": "^9.0.3",

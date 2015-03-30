@@ -3,23 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <title>Browserify Sandbox</title>
-  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/three.js/r61/three.min.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
   <script src="bundle.js"></script>
   <script>
-  var storage = {};
-  var usage = new Usage({
-    storage: {
-      write: function(data) {
-        localStorage['sandbox-hist'] = JSON.stringify(data);
-      },
-      read: function() {
-        return JSON.parse(localStorage['sandbox-hist'] || '{}')
-      }
-    }
-  });
+  console.log('window', moment());
+  // var storage = {};
+  // var usage = new Usage({
+  //   storage: {
+  //     write: function(data) {
+  //       localStorage['sandbox-hist'] = JSON.stringify(data);
+  //     },
+  //     read: function() {
+  //       return JSON.parse(localStorage['sandbox-hist'] || '{}')
+  //     }
+  //   }
+  // });
 
-  usage.log('visit', {page: 'sandbox'});
+  // usage.log('visit', {page: 'sandbox'});
   </script>
 </head>
 <body>

@@ -1,13 +1,13 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-(function (global){
 var usagejs = require('usagejs');
-var three = (typeof window !== "undefined" ? window.THREE : typeof global !== "undefined" ? global.THREE : null);
-var moment = (typeof window !== "undefined" ? window.moment : typeof global !== "undefined" ? global.moment : null);
+var moment = require('moment');
 
 window.Usage = usagejs['Usage'];
-}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"usagejs":4}],2:[function(require,module,exports){
+
+console.log(moment());
+},{"moment":2,"usagejs":4}],2:[function(require,module,exports){
 (function (global){
+;__browserify_shim_require__=require;(function browserifyShim(module, exports, require, define, browserify_shim__define__module__export__) {
 //! moment.js
 //! version : 2.9.0
 //! authors : Tim Wood, Iskren Chernev, Moment.js contributors
@@ -838,7 +838,7 @@ window.Usage = usagejs['Usage'];
         if (!locales[name] && hasModule) {
             try {
                 oldLocale = moment.locale();
-                require('./locale/' + name);
+                __browserify_shim_require__('./locale/' + name);
                 // because defineLocale currently also sets the global locale, we want to undo that for lazy loaded locales
                 moment.locale(oldLocale);
             } catch (e) { }
@@ -3051,6 +3051,10 @@ window.Usage = usagejs['Usage'];
         makeGlobal();
     }
 }).call(this);
+
+; browserify_shim__define__module__export__(typeof moment != "undefined" ? moment : window.moment);
+
+}).call(global, undefined, undefined, undefined, undefined, function defineExport(ex) { module.exports = ex; });
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 },{}],3:[function(require,module,exports){
